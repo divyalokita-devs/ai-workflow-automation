@@ -1,0 +1,30 @@
+# Environment files
+.env
+server/.env
+client/.env
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Go binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Database
+*.db

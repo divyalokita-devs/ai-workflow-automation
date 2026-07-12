@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      context: ./server
+    container_name: ai-workflow-backend
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./server/.env
+    volumes:
+      - ./server:/app
+
+  frontend:
+    build:
+      context: ./client
+    container_name: ai-workflow-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    volumes:
+      - ./client:/app
+      - /app/node_modules
